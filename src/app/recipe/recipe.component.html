@@ -1,0 +1,19 @@
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-4 my-3" *ngFor="let product of products">
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+  </div>
+  <div class="mb-4">
+    <mat-paginator #paginator
+      class="demo-paginator"
+      [length]="length"
+      showFirstLastButtons
+      (page)="onPageChange($event)"
+      [pageSizeOptions]="pageSizeOptions"
+      aria-label="Select page">
+    </mat-paginator>
+  </div>
+</div>
+
+

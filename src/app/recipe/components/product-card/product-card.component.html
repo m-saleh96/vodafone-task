@@ -1,0 +1,7 @@
+<div class="card card-border" >
+  <img [src]="product?.image"  class="card-img-top" alt="..."  height="420px" (click)="redirectToDetails(product?.id)">
+  <div class="card-body">
+    <h4 class="card-title text-danger">{{product?.title}}</h4>
+  </div>
+  <i class="fa fa-heart" [ngClass]="{'active': product.favorite}" (click)="addToFavorite(product)"></i>
+</div>

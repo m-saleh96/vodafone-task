@@ -1,0 +1,31 @@
+.product-image {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+h4 {
+  color: #555;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+  color: #777;
+}
+
+p {
+  color: #333;
+}
+
+h3{
+  color: #F07D21;
+  margin: 0;
+  font-family: 'Petit Formal Script', cursive;
+}

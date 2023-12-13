@@ -1,0 +1,34 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5">
+      <img [src]="product?.image" alt="{{product?.title}}" class="img-fluid product-image">
+    </div>
+    <div class="col-md-7 product-details">
+      <h2>{{product?.title}}</h2>
+      <ul class="list-unstyled">
+        <li><strong>Aggregate Likes:</strong> {{product?.aggregateLikes}}</li>
+        <li><strong>Health Score:</strong> {{product?.healthScore}}</li>
+        <li><strong>Price Per Serving:</strong> ${{product?.pricePerServing}}</li>
+        <li><strong>Ready In Minutes:</strong> {{product?.readyInMinutes}}</li>
+        <li><strong>Servings:</strong> {{product?.servings}}</li>
+      </ul>
+
+      <div class="ingredients-section mt-4">
+        <h3>Ingredients</h3>
+        <ul class="list-unstyled">
+          <li *ngFor="let ingredient of product?.extendedIngredients">
+            <strong>{{ingredient.nameClean || ingredient.name}}:</strong> {{ingredient.original}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-12 mt-5">
+      <h3>Instructions</h3>
+        <ol>
+          <li *ngFor="let step of product?.analyzedInstructions[0]?.steps">
+            {{step.step}}
+          </li>
+        </ol>
+    </div>
+  </div>
+</div>
